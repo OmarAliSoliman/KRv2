@@ -1,0 +1,382 @@
+@import 'https://fonts.googleapis.com/css?family=Nunito&display=swap"';
+
+$mainColor: #6D51FB;
+$seconColor: #2DD8B8;
+$whiteColor: #fff;
+$mainFont: 'Nunito', sans-serif;
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin: $top $right $bottom $left;
+}
+
+@mixin  padding($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}
+
+@mixin positioTop($top) {
+  top: $top;
+}
+
+@mixin positioLeft($left) {
+  left: $left;
+}
+
+@mixin positioBottom($bottom) {
+  bottom: $bottom;
+}
+
+@mixin positioRight($right) {
+  right: $right;
+}
+
+.clear{
+  clear: both;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbarfixed{
+  background-color: $whiteColor;
+}
+
+// start navbar
+.mobile{
+  display: none;
+  .sidenav{
+    font-family: $mainFont;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    @include positioTop(0%);
+    @include positioLeft(0%);
+    background-color: $mainColor;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+    .links{
+      @extend %centerelement;
+    }
+    a{
+      @include padding(8px, 8px, 8px, 32px);
+      text-decoration: none;
+      font-size: 25px;
+      color: $whiteColor;
+      display: block;
+      transition: 0.3s;  
+      &:hover{
+        color: #000;
+      }
+    }
+    .closebtn{
+      position: absolute;
+      @include positioTop(0%);
+      @include positioRight(25px);
+      font-size: 36px;
+      @include margin(0, 0, 0, 50px);
+    }
+  }
+  
+  .sidenavbutton{
+    font-family: $mainFont;
+    transition: all 1s ease;
+    width: 100%;
+    color: #000;
+    position: fixed;
+    @include positioTop(0);
+    height: 90px;
+    line-height: 90px;
+    z-index: 3;
+    span:first-of-type{
+      font-size:25px;
+      cursor:pointer;
+      color: #000;
+    }
+    span:last-of-type{
+      font-size:25px;
+      cursor:pointer;
+      color: #000;
+      .nite{
+        color: #000;
+      }
+    }
+  }
+}
+
+// end navbar
+
+// start web nav bar
+.web{
+  position: fixed;
+  top: 0;
+  @include positioTop(0);
+  width: 100%;
+  font-family: $mainFont;
+  font-weight: bold;
+  z-index: 3;
+  nav{
+    background-color: transparent !important;
+    height: 80px;
+    line-height: 80px;
+  }
+}
+
+// start header
+header{
+  font-family: $mainFont;
+  background-image: url("../images/slider_bg_1.jpg");
+  height: 85vh;
+  background-size: cover;
+  background-position: left;
+  .row{
+    @include margin(0, 0, 0, 0);
+    .header-content{
+      // height: 200px;
+      margin-top: 150px;
+      .header__content__info{
+        .header-name{
+          font-weight: 200;
+          font-size: 4em;
+          margin: 0;
+          .text-wrapper{
+            padding-top: 0.2em;
+            padding-right: 0.05em;
+            overflow: hidden;
+          }
+          .letter {
+            transform-origin: 50% 100%;
+            display: inline-block;
+            line-height: 1em;
+            color: #000 !important;
+          }
+        }
+       .type__parent{
+         font-size: 25px;
+         letter-spacing: 4px;
+         .type{
+           font-weight: bold;
+           color: $mainColor;
+         }
+       } 
+       .header__btn{
+         border: 0;
+         width: 30%;
+         padding: 8px;
+         background-color: $mainColor;
+         color: $whiteColor;
+         border-radius: 5px;
+         @include margin(10px, 0, 0, 0);
+         font-family: 'Nunito';
+       } 
+      }
+    }
+    .header-image{
+      position: relative;
+      img{
+        width: 95%;
+        position: absolute;
+        @include positioTop(5%);
+        @include positioRight(-20%);
+      }
+    }
+  }
+}
+
+// start client
+.client{
+  // height: 100%;
+  .cliet__slider{
+    img{
+      width: 70%;
+      filter: grayscale(100%);
+      transition: all 0.5s ease;
+      &:hover{
+        filter: grayscale(0);
+      }
+    }
+  }
+  .work-with-them{
+    @include positioTop(-42px);
+    overflow: hidden;
+  }
+  .work_with_them_pargraph{
+    position: relative;
+    top: -20px;
+    p{
+      font-family: $mainFont;
+      font-weight: bold;
+      font-size: 48px;
+      border: 10px solid $mainColor;
+      padding: 50px 50px 35px 50px;
+      z-index: -2;
+    }
+  }
+  .work_with_Them__slag{
+    font-family: $mainFont;
+    font-size: 18px;
+    padding: 9px;
+    @include margin(20px, 0, 0, 0);
+  }
+}
+
+.welcome{
+  background-color: #ECF6FF;
+  padding-top: 90px;
+  margin-top: 320px;
+  font-family: $mainFont;
+  .row{
+    margin: 0;
+  }
+  .welcom__image{
+    img{
+      width: 90%;
+      box-sizing: border-box;
+      animation: welcomeImageAnimation 3s linear infinite;
+    }
+  }
+  .welcom__about{
+    margin-top: 55px;
+    .welcome__about__us{
+      color: $mainColor;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .welcome__about__slag{
+      font-weight: 700;
+      .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.1em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em;
+      }    
+      .line {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: $mainColor;
+        transform-origin: 0 50%;
+      }
+      .line1 { 
+        top: 0; 
+        left: 0;
+      }
+      .letter {
+        display: inline-block;
+        line-height: 1em;
+      }
+    }
+    p{
+      line-height: 2;
+    }
+    button{
+      background-color: $mainColor;
+      border: none;
+      @include padding(10px, 10px, 10px, 10px);
+      color: $whiteColor;
+      width: 40%;
+      border-radius: 5px;
+      position: relative;
+      transition: all .5s linear;
+      &:hover{
+        background-color: $seconColor;
+      }
+    }
+  }
+}
+
+
+// start animation
+
+@keyframes welcomeImageAnimation{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-15px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+// start media quey
+
+@media(min-width: 1024px){
+  .client{
+    height: 130px !important;
+  }
+}
+
+@media(max-width: 800px){
+  .mobile{
+    display: block;
+  }
+  .web{
+    display: none;
+  }
+  header{
+    .header-image{
+      img{
+        width: 77% !important;
+        right: 9% !important;
+      }
+    }
+  }
+  .client{
+    .work_with_Them__slag{
+      margin-top: 0 !important;
+    }
+    .work_with_them_pargraph{
+      p{
+        font-size: 32px !important;
+        margin-bottom: -1rem;
+      }
+    }
+  }
+  .welcome{
+    margin-top: 0;
+  }
+}
+
+// @media(max)
+
+@media(max-width: 524px){
+  header{
+    .header-image{
+      display: none;
+    }
+    .header__content__info{
+      .header__btn{
+        width: 100% !important;
+      }
+      .display-2{
+        font-size: 3.7rem !important;
+      }
+    }
+  }
+  .client{
+    .work_with_them_pargraph{
+      p{
+        font-size: 32px !important;
+        margin-bottom: -10px;
+      }
+    }
+  }
+}
+
+// start extends
+
+%centerelement{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

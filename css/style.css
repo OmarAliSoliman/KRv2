@@ -1,0 +1,247 @@
+@import 'https://fonts.googleapis.com/css?family=Nunito&display=swap"';
+.clear {
+  clear: both; }
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.navbarfixed {
+  background-color: #fff; }
+
+.mobile {
+  display: none; }
+  .mobile .sidenav {
+    font-family: "Nunito", sans-serif;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0%;
+    left: 0%;
+    background-color: #6D51FB;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center; }
+    .mobile .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #fff;
+      display: block;
+      transition: 0.3s; }
+      .mobile .sidenav a:hover {
+        color: #000; }
+    .mobile .sidenav .closebtn {
+      position: absolute;
+      top: 0%;
+      right: 25px;
+      font-size: 36px;
+      margin: 0 0 0 50px; }
+  .mobile .sidenavbutton {
+    font-family: "Nunito", sans-serif;
+    transition: all 1s ease;
+    width: 100%;
+    color: #000;
+    position: fixed;
+    top: 0;
+    height: 90px;
+    line-height: 90px;
+    z-index: 3; }
+    .mobile .sidenavbutton span:first-of-type {
+      font-size: 25px;
+      cursor: pointer;
+      color: #000; }
+    .mobile .sidenavbutton span:last-of-type {
+      font-size: 25px;
+      cursor: pointer;
+      color: #000; }
+      .mobile .sidenavbutton span:last-of-type .nite {
+        color: #000; }
+
+.web {
+  position: fixed;
+  top: 0;
+  top: 0;
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  z-index: 3; }
+  .web nav {
+    background-color: transparent !important;
+    height: 80px;
+    line-height: 80px; }
+
+header {
+  font-family: "Nunito", sans-serif;
+  background-image: url("../images/slider_bg_1.jpg");
+  height: 85vh;
+  background-size: cover;
+  background-position: left; }
+  header .row {
+    margin: 0 0 0 0; }
+    header .row .header-content {
+      margin-top: 150px; }
+      header .row .header-content .header__content__info .header-name {
+        font-weight: 200;
+        font-size: 4em;
+        margin: 0; }
+        header .row .header-content .header__content__info .header-name .text-wrapper {
+          padding-top: 0.2em;
+          padding-right: 0.05em;
+          overflow: hidden; }
+        header .row .header-content .header__content__info .header-name .letter {
+          transform-origin: 50% 100%;
+          display: inline-block;
+          line-height: 1em;
+          color: #000 !important; }
+      header .row .header-content .header__content__info .type__parent {
+        font-size: 25px;
+        letter-spacing: 4px; }
+        header .row .header-content .header__content__info .type__parent .type {
+          font-weight: bold;
+          color: #6D51FB; }
+      header .row .header-content .header__content__info .header__btn {
+        border: 0;
+        width: 30%;
+        padding: 8px;
+        background-color: #6D51FB;
+        color: #fff;
+        border-radius: 5px;
+        margin: 10px 0 0 0;
+        font-family: 'Nunito'; }
+    header .row .header-image {
+      position: relative; }
+      header .row .header-image img {
+        width: 95%;
+        position: absolute;
+        top: 5%;
+        right: -20%; }
+
+.client .cliet__slider img {
+  width: 70%;
+  filter: grayscale(100%);
+  transition: all 0.5s ease; }
+  .client .cliet__slider img:hover {
+    filter: grayscale(0); }
+.client .work-with-them {
+  top: -42px;
+  overflow: hidden; }
+.client .work_with_them_pargraph {
+  position: relative;
+  top: -20px; }
+  .client .work_with_them_pargraph p {
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    border: 10px solid #6D51FB;
+    padding: 50px 50px 35px 50px;
+    z-index: -2; }
+.client .work_with_Them__slag {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  padding: 9px;
+  margin: 20px 0 0 0; }
+
+.welcome {
+  background-color: #ECF6FF;
+  padding-top: 90px;
+  margin-top: 320px;
+  font-family: "Nunito", sans-serif; }
+  .welcome .row {
+    margin: 0; }
+  .welcome .welcom__image img {
+    width: 90%;
+    box-sizing: border-box;
+    animation: welcomeImageAnimation 3s linear infinite; }
+  .welcome .welcom__about {
+    margin-top: 55px; }
+    .welcome .welcom__about .welcome__about__us {
+      color: #6D51FB;
+      font-weight: bold;
+      letter-spacing: 2px; }
+    .welcome .welcom__about .welcome__about__slag {
+      font-weight: 700; }
+      .welcome .welcom__about .welcome__about__slag .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.1em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em; }
+      .welcome .welcom__about .welcome__about__slag .line {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: #6D51FB;
+        transform-origin: 0 50%; }
+      .welcome .welcom__about .welcome__about__slag .line1 {
+        top: 0;
+        left: 0; }
+      .welcome .welcom__about .welcome__about__slag .letter {
+        display: inline-block;
+        line-height: 1em; }
+    .welcome .welcom__about p {
+      line-height: 2; }
+    .welcome .welcom__about button {
+      background-color: #6D51FB;
+      border: none;
+      padding: 10px 10px 10px 10px;
+      color: #fff;
+      width: 40%;
+      border-radius: 5px;
+      position: relative;
+      transition: all .5s linear; }
+      .welcome .welcom__about button:hover {
+        background-color: #2DD8B8; }
+
+@keyframes welcomeImageAnimation {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-15px); }
+  100% {
+    transform: translateY(0px); } }
+@media (min-width: 1024px) {
+  .client {
+    height: 130px !important; } }
+@media (max-width: 800px) {
+  .mobile {
+    display: block; }
+
+  .web {
+    display: none; }
+
+  header .header-image img {
+    width: 77% !important;
+    right: 9% !important; }
+
+  .client .work_with_Them__slag {
+    margin-top: 0 !important; }
+  .client .work_with_them_pargraph p {
+    font-size: 32px !important;
+    margin-bottom: -1rem; }
+
+  .welcome {
+    margin-top: 0; } }
+@media (max-width: 524px) {
+  header .header-image {
+    display: none; }
+  header .header__content__info .header__btn {
+    width: 100% !important; }
+  header .header__content__info .display-2 {
+    font-size: 3.7rem !important; }
+
+  .client .work_with_them_pargraph p {
+    font-size: 32px !important;
+    margin-bottom: -10px; } }
+.mobile .sidenav .links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+/*# sourceMappingURL=style.css.map */
