@@ -198,6 +198,37 @@ header {
       .welcome .welcom__about button:hover {
         background-color: #2DD8B8; }
 
+.servise {
+  font-family: "Nunito", sans-serif;
+  margin: 90px 0 0 0; }
+  .servise .servise_header span {
+    color: #6D51FB;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px; }
+  .servise .servise_header h5 {
+    font-weight: bold;
+    font-size: 35px; }
+  .servise .servise_card {
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15);
+    transition: all .5s linear; }
+    .servise .servise_card i {
+      margin: 20px 0 20px 0;
+      color: #6D51FB;
+      font-size: 45px; }
+    .servise .servise_card h5 {
+      font-weight: bold;
+      margin: 0 0 10px 0; }
+    .servise .servise_card p {
+      line-height: 2;
+      color: #555;
+      padding-bottom: 15px; }
+    .servise .servise_card:hover {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+  .servise .main-card {
+    box-shadow: none !important;
+    animation: cardAnimation 3s ease infinite; }
+
 @keyframes welcomeImageAnimation {
   0% {
     transform: translateY(0px); }
@@ -205,6 +236,13 @@ header {
     transform: translateY(-15px); }
   100% {
     transform: translateY(0px); } }
+@keyframes cardAnimation {
+  0% {
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15); }
+  50% {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+  100% {
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15); } }
 @media (min-width: 1024px) {
   .client {
     height: 130px !important; } }

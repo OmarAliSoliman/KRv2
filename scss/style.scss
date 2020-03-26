@@ -292,6 +292,48 @@ header{
   }
 }
 
+// start servises
+.servise{
+  font-family: $mainFont;
+  @include margin( 90px, 0, 0, 0);
+  .servise_header {
+    span{
+      color: $mainColor;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    h5{
+      font-weight: bold;
+      font-size: 35px;
+    }
+  }
+  .servise_card{
+    box-shadow: 0 .2rem .2rem rgba(0,0,0,.15);
+    transition: all .5s linear;
+    i{
+      @include margin(20px, 0, 20px, 0);
+      color: $mainColor;
+      font-size: 45px;
+    }
+    h5{
+      font-weight: bold;
+      @include margin(0, 0, 10px, 0);
+    }
+    p{
+      line-height: 2;
+      color: #555;
+      padding-bottom: 15px;
+    }
+    &:hover{
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    }
+  }
+  .main-card{
+    box-shadow: none !important;
+    animation: cardAnimation 3s ease infinite;
+  }
+}
 
 // start animation
 
@@ -304,6 +346,18 @@ header{
   }
   100%{
     transform: translateY(0px);
+  }
+}
+
+@keyframes cardAnimation{
+  0%{
+    box-shadow: 0 .2rem .2rem rgba(0,0,0,.15);
+  }
+  50%{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  }
+  100%{
+    box-shadow: 0 .2rem .2rem rgba(0,0,0,.15);
   }
 }
 

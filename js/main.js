@@ -80,29 +80,45 @@
 // console.log($(".welcome__about__slag").offset().top);
 // $(window).scroll(function(){
 //   console.log($(this).scrollTop());
-//   if($(this).scrollTop() == 1020){
+//   if($(this).scrollTop() == 2000){
 //     animeanimatio();
 //   }
 // })
 
-  var textWrapper = document.querySelector('.welcome__about__slag');
-  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-  anime.timeline({loop: true})
-  .add({
-    targets: '.welcome__about__slag .letter',
-    opacity: [0,1],
-    easing: "linear",
-    duration: 2250,
-    delay: (el, i) => 150 * (i+1)
-  }).add({
-    targets: '.welcome__about__slag',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
+  function animeanimatio(){
+    var textWrapper = document.querySelector('.welcome__about__slag');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    anime.timeline({loop: true})
+    .add({
+      targets: '.welcome__about__slag .letter',
+      opacity: [0,1],
+      easing: "linear",
+      duration: 2250,
+      delay: (el, i) => 150 * (i+1)
+    }).add({
+      targets: '.welcome__about__slag',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+  }
+
+  animeanimatio();
 
 
+  // function animate(){
+  //   var svg = new Walkway({
+  //   selector: '.svg-icon',
+  //   easing: 'easeInOutCubic',
+  //   duration: 3000
+  // });
+  // svg.draw(function(){
+  // animate();
+  //   });
+  // }
+
+  animate();
 
 
 
