@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Nunito&display=swap"';
+@import "https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap";
 .clear {
   clear: both; }
 
@@ -8,12 +8,16 @@ body {
   box-sizing: border-box; }
 
 .navbarfixed {
-  background-color: #fff; }
+  background-color: #fff;
+  box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.15); }
+
+.nav-link-color {
+  color: #000 !important; }
 
 .mobile {
   display: none; }
   .mobile .sidenav {
-    font-family: "Nunito", sans-serif;
+    font-family: "Baloo Thambi 2", cursive;
     height: 100%;
     width: 0;
     position: fixed;
@@ -41,7 +45,7 @@ body {
       font-size: 36px;
       margin: 0 0 0 50px; }
   .mobile .sidenavbutton {
-    font-family: "Nunito", sans-serif;
+    font-family: "Baloo Thambi 2", cursive;
     transition: all 1s ease;
     width: 100%;
     color: #000;
@@ -50,40 +54,47 @@ body {
     height: 90px;
     line-height: 90px;
     z-index: 3; }
-    .mobile .sidenavbutton span:first-of-type {
-      font-size: 25px;
-      cursor: pointer;
-      color: #000; }
     .mobile .sidenavbutton span:last-of-type {
       font-size: 25px;
       cursor: pointer;
-      color: #000; }
-      .mobile .sidenavbutton span:last-of-type .nite {
-        color: #000; }
+      color: #fff; }
 
 .web {
   position: fixed;
   top: 0;
   top: 0;
   width: 100%;
-  font-family: "Nunito", sans-serif;
+  font-family: "Baloo Thambi 2", cursive;
   font-weight: bold;
   z-index: 3; }
   .web nav {
     background-color: transparent !important;
     height: 80px;
     line-height: 80px; }
+    .web nav ul li .nav-link {
+      color: #fff; }
 
 header {
-  font-family: "Nunito", sans-serif;
-  background-image: url("../images/slider_bg_1.jpg");
+  font-family: "Baloo Thambi 2", cursive;
+  background-image: url("../images/background.jpg");
   height: 85vh;
   background-size: cover;
   background-position: left; }
+  header .svg-group-img {
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    opacity: .6;
+    animation: svganimation 3s linear infinite; }
+  header .svg-top-left {
+    width: 10%;
+    float: left;
+    opacity: .5;
+    animation: svganimation 6s linear infinite; }
   header .row {
     margin: 0 0 0 0; }
     header .row .header-content {
-      margin-top: 150px; }
+      margin-top: 210px; }
       header .row .header-content .header__content__info .header-name {
         font-weight: 200;
         font-size: 4em;
@@ -96,18 +107,19 @@ header {
           transform-origin: 50% 100%;
           display: inline-block;
           line-height: 1em;
-          color: #000 !important; }
+          color: #fff !important; }
       header .row .header-content .header__content__info .type__parent {
         font-size: 25px;
-        letter-spacing: 4px; }
+        letter-spacing: 4px;
+        color: #fff; }
         header .row .header-content .header__content__info .type__parent .type {
           font-weight: bold;
-          color: #6D51FB; }
+          color: #2DD8B8; }
       header .row .header-content .header__content__info .header__btn {
         border: 0;
         width: 30%;
         padding: 8px;
-        background-color: #6D51FB;
+        background-color: #2DD8B8;
         color: #fff;
         border-radius: 5px;
         margin: 10px 0 0 0;
@@ -118,7 +130,8 @@ header {
         width: 95%;
         position: absolute;
         top: 5%;
-        right: -20%; }
+        right: -20%;
+        animation: header-image-animation 4s linear infinite; }
 
 .client .cliet__slider img {
   width: 70%;
@@ -133,14 +146,14 @@ header {
   position: relative;
   top: -20px; }
   .client .work_with_them_pargraph p {
-    font-family: "Nunito", sans-serif;
+    font-family: "Baloo Thambi 2", cursive;
     font-weight: bold;
     font-size: 48px;
     border: 10px solid #6D51FB;
     padding: 50px 50px 35px 50px;
     z-index: -2; }
 .client .work_with_Them__slag {
-  font-family: "Nunito", sans-serif;
+  font-family: "Baloo Thambi 2", cursive;
   font-size: 18px;
   padding: 9px;
   margin: 20px 0 0 0; }
@@ -149,7 +162,7 @@ header {
   background-color: #ECF6FF;
   padding-top: 90px;
   margin-top: 320px;
-  font-family: "Nunito", sans-serif; }
+  font-family: "Baloo Thambi 2", cursive; }
   .welcome .row {
     margin: 0; }
   .welcome .welcom__image img {
@@ -199,7 +212,7 @@ header {
         background-color: #2DD8B8; }
 
 .servise {
-  font-family: "Nunito", sans-serif;
+  font-family: "Baloo Thambi 2", cursive;
   margin: 90px 0 0 0; }
   .servise .servise_header span {
     color: #6D51FB;
@@ -211,24 +224,68 @@ header {
     font-size: 35px; }
   .servise .servise_card {
     box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15);
-    transition: all .5s linear; }
+    transition: all .5s linear;
+    position: relative; }
+    .servise .servise_card .servise_img_digital {
+      width: 93%; }
+    .servise .servise_card .servise_img_vide, .servise .servise_card .servise_img_brand {
+      width: 66%; }
+    .servise .servise_card .servise_img_micro, .servise .servise_card .servise_img_mobile-app, .servise .servise_card .servise_img_web_app {
+      width: 80%; }
     .servise .servise_card i {
-      margin: 20px 0 20px 0;
+      margin: 20px 0 0 0;
       color: #6D51FB;
-      font-size: 45px; }
+      font-size: 25px;
+      font-weight: none;
+      position: absolute;
+      left: 5%;
+      bottom: 5%; }
     .servise .servise_card h5 {
       font-weight: bold;
-      margin: 0 0 10px 0; }
+      margin: 10px 0 10px 0;
+      text-align: left;
+      padding-left: 10px;
+      color: #6D51FB; }
     .servise .servise_card p {
       line-height: 2;
       color: #555;
-      padding-bottom: 15px; }
+      padding-bottom: 55px;
+      text-align: left;
+      padding-left: 10px;
+      margin-top: 15px; }
     .servise .servise_card:hover {
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
-  .servise .main-card {
-    box-shadow: none !important;
-    animation: cardAnimation 3s ease infinite; }
 
+.number {
+  position: relative;
+  margin-top: 100px;
+  padding: 30px 0 0 0;
+  background-color: #ECF6FF; }
+  .number .number_image {
+    width: 8%;
+    position: absolute;
+    left: 2%;
+    opacity: 0.6;
+    animation: svganimation 3s linear infinite; }
+  .number .number_card .svg-icon {
+    width: 50%; }
+    .number .number_card .svg-icon g {
+      stroke: #6D51FB !important; }
+  .number .number_card .counter {
+    font-size: 20px; }
+  .number .number_card h6 {
+    font-family: "Baloo Thambi 2", cursive;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    letter-spacing: 1px; }
+
+@keyframes header-image-animation {
+  0% {
+    transform: translateY(5px); }
+  50% {
+    transform: translateY(-5px); }
+  100% {
+    transform: translateY(5px); } }
 @keyframes welcomeImageAnimation {
   0% {
     transform: translateY(0px); }
@@ -243,6 +300,13 @@ header {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
   100% {
     box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15); } }
+@keyframes svganimation {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
 @media (min-width: 1024px) {
   .client {
     height: 130px !important; } }
@@ -264,10 +328,21 @@ header {
     margin-bottom: -1rem; }
 
   .welcome {
-    margin-top: 0; } }
+    margin-top: 0; }
+
+  .servise .servise_card .servise_img_vide {
+    width: 55%; }
+  .servise .servise_card .servise_img_micro {
+    width: 66%; }
+  .servise .servise_card .servise_img_digital {
+    width: 78%; } }
 @media (max-width: 524px) {
   header .header-image {
     display: none; }
+  header .header__content__info .header-name {
+    font-size: 2.5rem !important; }
+  header .header__content__info .type__parent {
+    font-size: 24px !important; }
   header .header__content__info .header__btn {
     width: 100% !important; }
   header .header__content__info .display-2 {
@@ -275,7 +350,13 @@ header {
 
   .client .work_with_them_pargraph p {
     font-size: 32px !important;
-    margin-bottom: -10px; } }
+    margin-bottom: -10px; }
+
+  .welcome .welcome__about__slag {
+    font-size: 26px !important; }
+
+  .servise .servise_card img {
+    width: 100% !important; } }
 .mobile .sidenav .links {
   position: absolute;
   top: 50%;

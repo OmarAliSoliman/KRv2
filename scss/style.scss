@@ -1,9 +1,9 @@
-@import 'https://fonts.googleapis.com/css?family=Nunito&display=swap"';
+@import 'https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap';
 
 $mainColor: #6D51FB;
 $seconColor: #2DD8B8;
 $whiteColor: #fff;
-$mainFont: 'Nunito', sans-serif;
+$mainFont: 'Baloo Thambi 2', cursive;
 
 @mixin margin($top, $right, $bottom, $left) {
   margin: $top $right $bottom $left;
@@ -41,6 +41,11 @@ body{
 
 .navbarfixed{
   background-color: $whiteColor;
+  box-shadow: 0 1rem .5rem rgba(0,0,0,.15);
+}
+
+.nav-link-color{
+  color: #000 !important;
 }
 
 // start navbar
@@ -92,18 +97,10 @@ body{
     height: 90px;
     line-height: 90px;
     z-index: 3;
-    span:first-of-type{
-      font-size:25px;
-      cursor:pointer;
-      color: #000;
-    }
     span:last-of-type{
       font-size:25px;
       cursor:pointer;
-      color: #000;
-      .nite{
-        color: #000;
-      }
+      color: #fff;
     }
   }
 }
@@ -123,21 +120,41 @@ body{
     background-color: transparent !important;
     height: 80px;
     line-height: 80px;
+    ul{
+      li{
+        .nav-link{
+          color: #fff;
+        }
+      }
+    }
   }
 }
 
 // start header
 header{
   font-family: $mainFont;
-  background-image: url("../images/slider_bg_1.jpg");
+  background-image: url("../images/background.jpg");
   height: 85vh;
   background-size: cover;
   background-position: left;
+  .svg-group-img{
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    opacity: .6;
+    animation: svganimation 3s linear infinite;
+  }
+  .svg-top-left{
+    width: 10%; 
+    float: left;
+    opacity: .5;
+    animation: svganimation 6s linear infinite;
+  }
   .row{
     @include margin(0, 0, 0, 0);
     .header-content{
       // height: 200px;
-      margin-top: 150px;
+      margin-top: 210px;
       .header__content__info{
         .header-name{
           font-weight: 200;
@@ -152,22 +169,23 @@ header{
             transform-origin: 50% 100%;
             display: inline-block;
             line-height: 1em;
-            color: #000 !important;
+            color: #fff !important;
           }
         }
        .type__parent{
          font-size: 25px;
          letter-spacing: 4px;
+         color: #fff;
          .type{
            font-weight: bold;
-           color: $mainColor;
+           color: $seconColor;
          }
        } 
        .header__btn{
          border: 0;
          width: 30%;
          padding: 8px;
-         background-color: $mainColor;
+         background-color: $seconColor;
          color: $whiteColor;
          border-radius: 5px;
          @include margin(10px, 0, 0, 0);
@@ -182,6 +200,7 @@ header{
         position: absolute;
         @include positioTop(5%);
         @include positioRight(-20%);
+        animation: header-image-animation 4s linear infinite;
       }
     }
   }
@@ -311,31 +330,91 @@ header{
   .servise_card{
     box-shadow: 0 .2rem .2rem rgba(0,0,0,.15);
     transition: all .5s linear;
+    position: relative;
+    .servise_img_digital{
+      width: 93%;
+    }
+    .servise_img_vide, .servise_img_brand{
+      width: 66%;
+    }
+    .servise_img_micro, .servise_img_mobile-app, .servise_img_web_app{
+      width: 80%;
+    }
     i{
-      @include margin(20px, 0, 20px, 0);
+      @include margin(20px, 0, 0, 0);
       color: $mainColor;
-      font-size: 45px;
+      font-size: 25px;
+      font-weight: none;
+      position: absolute;
+      left: 5%;
+      bottom: 5%;
     }
     h5{
       font-weight: bold;
-      @include margin(0, 0, 10px, 0);
+      @include margin(10px, 0, 10px, 0);
+      text-align: left;
+      padding-left: 10px;
+      color: $mainColor;
     }
     p{
       line-height: 2;
       color: #555;
-      padding-bottom: 15px;
+      padding-bottom: 55px;
+      text-align: left;
+      padding-left: 10px;
+      margin-top: 15px;
     }
     &:hover{
       box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
     }
   }
-  .main-card{
-    box-shadow: none !important;
-    animation: cardAnimation 3s ease infinite;
+}
+
+// start numbers
+.number{
+  position: relative;
+  margin-top: 100px;
+  @include padding(30px, 0, 0, 0);
+  background-color: #ECF6FF;
+  .number_image{
+    width: 8%;
+    position: absolute;
+    left: 2%;
+    opacity: 0.6;
+    animation: svganimation 3s linear infinite;
+  }
+  .number_card{
+    .svg-icon{
+      width: 50%;
+      g{
+        stroke: $mainColor !important;
+      }
+    }
+    .counter{
+      font-size: 20px;
+    }
+    h6{
+      font-family: $mainFont;
+      text-transform: capitalize;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
   }
 }
 
 // start animation
+
+@keyframes header-image-animation{
+  0%{
+    transform: translateY(5px);
+  }
+  50%{
+    transform: translateY(-5px);
+  }
+  100%{
+    transform: translateY(5px);
+  }
+}
 
 @keyframes welcomeImageAnimation{
   0%{
@@ -358,6 +437,18 @@ header{
   }
   100%{
     box-shadow: 0 .2rem .2rem rgba(0,0,0,.15);
+  }
+}
+
+@keyframes svganimation{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
   }
 }
 
@@ -398,6 +489,19 @@ header{
   .welcome{
     margin-top: 0;
   }
+  .servise{
+    .servise_card{
+      .servise_img_vide{
+        width: 55% ;
+      }
+      .servise_img_micro{
+        width: 66% ;
+      }
+      .servise_img_digital{
+        width: 78% ;
+      }
+    }
+  }
 }
 
 // @media(max)
@@ -408,6 +512,12 @@ header{
       display: none;
     }
     .header__content__info{
+      .header-name{
+        font-size: 2.5rem !important;
+      }
+      .type__parent{
+        font-size: 24px !important;
+      }
       .header__btn{
         width: 100% !important;
       }
@@ -421,6 +531,18 @@ header{
       p{
         font-size: 32px !important;
         margin-bottom: -10px;
+      }
+    }
+  }
+  .welcome{
+    .welcome__about__slag{
+      font-size: 26px !important;
+    }
+  }
+  .servise{
+    .servise_card{
+      img{
+        width: 100% !important;
       }
     }
   }

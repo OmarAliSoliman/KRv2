@@ -1,13 +1,22 @@
  $(document).ready(function(){
 
+  var navLink = document.querySelectorAll("nav ul li .nav-link");
   // scroll nav bar
   $(window).scroll(function(){
     if($(this).scrollTop() > 0){
       $(".sidenavbutton").addClass("navbarfixed");
       $(".web").addClass("navbarfixed");
+      navLink.forEach((item)=>{
+        $(item).addClass('nav-link-color');
+      });
+      $(".side-icon").css("color","#000");
     }else{
       $(".sidenavbutton").removeClass("navbarfixed");
       $(".web").removeClass("navbarfixed");
+      navLink.forEach((item)=>{
+        $(item).removeClass('nav-link-color');
+      });
+      $(".side-icon").css("color","#fff");
     }
   })
 
@@ -73,18 +82,6 @@
     delay: 1000
   });
 
-});
-
-// Wrap every letter in a span
-// var m = $(".welcome__about__slag").offset().top;
-// console.log($(".welcome__about__slag").offset().top);
-// $(window).scroll(function(){
-//   console.log($(this).scrollTop());
-//   if($(this).scrollTop() == 2000){
-//     animeanimatio();
-//   }
-// })
-
   function animeanimatio(){
     var textWrapper = document.querySelector('.welcome__about__slag');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -107,18 +104,31 @@
   animeanimatio();
 
 
-  // function animate(){
-  //   var svg = new Walkway({
-  //   selector: '.svg-icon',
-  //   easing: 'easeInOutCubic',
-  //   duration: 3000
-  // });
-  // svg.draw(function(){
-  // animate();
-  //   });
-  // }
+  // draw sgv
 
-  animate();
+    var svg = $('.svg-icon-client').drawsvg({
+      duration: 3500,
+      stagger: 5000,
+      reverse: true,
+      callback: function() {
+        animate();
+      },
+    });
+    function animate() {
+      svg.drawsvg('animate');  
+    }
+
+    animate();
+
+//counter
+$('.counter').counterUp({
+  delay: 10,
+  time: 1000
+});
+
+
+});
+
 
 
 
